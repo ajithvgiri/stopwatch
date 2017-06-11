@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Timer</string>
+    <string name="stopwatch">Stopwatch</string>
+    <string name="background">background</string>
+    <string name="logo">logo</string>
+    <string name="_01">00</string>
+    <string name="todo">TODO</string>
+    <string name="colon">:</string>
+    <string name="_50">00</string>
+    <string name="h">H </string>
+    <string name="m">M</string>
+    <string name="s">S</string>
+</resources>
