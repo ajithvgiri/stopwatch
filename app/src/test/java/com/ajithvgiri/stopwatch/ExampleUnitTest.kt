@@ -1,4 +1,4 @@
-package com.ajithvgiri.timer
+package com.ajithvgiri.stopwatch
 
 import org.junit.Test
 

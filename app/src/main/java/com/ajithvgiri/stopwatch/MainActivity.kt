@@ -1,14 +1,11 @@
-package com.ajithvgiri.timer
+package com.ajithvgiri.stopwatch
 
-import android.content.Context
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.os.CountDownTimer
 import android.os.Handler
 import android.os.SystemClock
+import android.support.v7.app.AppCompatActivity
 import android.widget.ImageButton
 import android.widget.TextView
-import com.ajithvgiri.timer.R.id.hour
 
 
 class MainActivity : AppCompatActivity() {
@@ -18,6 +15,7 @@ class MainActivity : AppCompatActivity() {
     var hour: TextView? = null
     var minute: TextView? = null
     var seconds: TextView? = null
+    var milli_seconds: TextView? = null
 
     internal var MillisecondTime: Long = 0
     internal var StartTime: Long = 0
@@ -37,16 +35,17 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        startButton = findViewById(R.id.startButton) as ImageButton
+        startButton = findViewById(R.id.startButton)
         bindViews()
 
     }
 
     private fun bindViews() {
 
-        hour = findViewById(R.id.hour) as TextView
-        minute = findViewById(R.id.minute) as TextView
-        seconds = findViewById(R.id.seconds) as TextView
+        hour = findViewById(R.id.hour)
+        minute = findViewById(R.id.minute)
+        seconds = findViewById(R.id.seconds)
+        milli_seconds = findViewById(R.id.milli_second)
 
 
         startButton?.setOnClickListener {
@@ -95,6 +94,8 @@ class MainActivity : AppCompatActivity() {
             } else {
                 seconds?.text = Seconds.toString()
             }
+
+            milli_seconds?.text = MilliSeconds.toString()
 
             handler?.postDelayed(this, 0)
         }

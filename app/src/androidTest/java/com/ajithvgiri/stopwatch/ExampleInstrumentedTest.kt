@@ -1,4 +1,4 @@
-package com.ajithvgiri.timer
+package com.ajithvgiri.stopwatch
 
 import android.support.test.InstrumentationRegistry
 import android.support.test.runner.AndroidJUnit4
